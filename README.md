@@ -71,3 +71,97 @@ $(function() {
 ## Drugi przykład
 
 * [Szablon z „document ready wrapper”](http://jsbin.com/ogufuf/2/edit#javascript,html,live)
+
+Źródło danych [Comparison of web application frameworks](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks).
+
+HTML:
+```html
+<ul id="web-frameworks">
+<li>Ruby
+  <ul>
+  <li>Ruby on Rails
+  <li>Sinatra
+  </ul>
+<li>Python
+  <ul>
+  <li>Django
+  <li>CherryPy
+  </ul>
+<li>PHP
+  <ul>
+  <li>CodeIgniter
+  <li>CakePHP
+  <li>Symphony
+  </ul>
+</ul>
+```
+
+CSS:
+```css
+.horizontal {
+  float: left;
+  list-style: none;
+  margin: 1em;
+}
+```
+
+JS1:
+```js
+$("#web-frameworks > li")
+  .addClass("horizontal");
+```
+
+CSS:
+```css
+.sub-list {
+  color: #a00;
+}
+```
+
+JS1+
+```js
+$("#web-frameworks li:not(.horizontal)")
+  .addClass("sub-list");
+```
+
+CSS:
+```css
+.highlight {
+  font-weight: bold;
+  color: #f00;
+}
+```
+
+JS1+
+```js
+$("li:contains(Rails)")
+  .first()
+  .addClass("highlight");
+```
+
+Cały przykład → [jsbin](http://jsbin.com/ogufuf/5/edit)
+
+
+## Trzeci przykład
+
+HTML
+```html
+<table>
+<tr>
+  <td>Ruby on Rails
+  <td>Ruby
+  <td>
+<tr>
+  <td>Sinatra
+  <td>Ruby
+  <td>
+<tr>
+  <td>Django
+  <td>Python
+  <td>
+<tr>
+  <td>CherryPy
+  <td>Python
+  <td>
+</table>
+```
