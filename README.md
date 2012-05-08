@@ -68,11 +68,11 @@ $(function() {
 });
 ```
 
-## Drugi przykład
+## Drugi przykład – *DOM traversal*
 
 * [Szablon z „document ready wrapper”](http://jsbin.com/ogufuf/2/edit#javascript,html,live)
 
-Źródło danych [Comparison of web application frameworks](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks).
+Źródło danych: [Comparison of web application frameworks](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks).
 
 HTML:
 ```html
@@ -142,26 +142,50 @@ $("li:contains(Rails)")
 Cały przykład → [jsbin](http://jsbin.com/ogufuf/5/edit)
 
 
-## Trzeci przykład
+## Trzeci przykład – *chaining*
 
 HTML
 ```html
-<table>
+<table id="web-frameworks">
 <tr>
   <td>Ruby on Rails
   <td>Ruby
-  <td>
+  <td>3.2.3
 <tr>
   <td>Sinatra
   <td>Ruby
-  <td>
+  <td>1.3.1
 <tr>
   <td>Django
   <td>Python
-  <td>
+  <td>1.4
 <tr>
   <td>CherryPy
   <td>Python
-  <td>
+  <td>3.2.2
 </table>
 ```
+
+CSS:
+```CSS
+td {
+  padding: 0.25em 1em;
+}
+.highlight {
+  font-weight: bold;
+  color: #f00;
+}
+```
+
+JS:
+```js
+$("td:contains(Ruby)")
+  .parent()
+  .find("td:eq(0)")
+  .addClass("highlight")
+  .end()
+  .find("td:eq(2)")
+  .addClass("highlight");
+```
+
+Cały przykład → [jsbin](http://jsbin.com/ogufuf/7/edit)
