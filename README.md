@@ -1,6 +1,11 @@
 # Użyteczne linki
 
 * [HTML5 Doctor](http://html5doctor.com/)
+* [jQuery Selectors](http://refcardz.dzone.com/refcardz/jquery-selectors)
+* [jQuery Fundamentals](http://jqfundamentals.com/book/index.html)
+* [Learning jQuery](http://www.learningjquery.com/) – Tips, Techniques, Tutorials
+  ([learn.jquery.com web site](https://github.com/jquery/learn.jquery.com))
+* [Tutorials:Getting Started with jQuery](http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery)
 
 
 ## Zaczynamy
