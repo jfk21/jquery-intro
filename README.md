@@ -8,14 +8,15 @@
 1. Szablon strony – [jQury Intro](http://jsbin.com/ogufuf/edit#javascript,html,live)
 
 HTML:
-
-    <p>ala ma kota</p>
-
+```html
+<p>ala ma kota</p>
+```
 JS1:
-
+```js
     $(function() {
       $('p').html('ola ma psa');
     });
+```
 
 JS2 == JS1:
 
