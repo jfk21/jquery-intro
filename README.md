@@ -260,6 +260,8 @@ $(".button").on({
 });
 ```
 
+Do elementu *.container* dodajemy funkcję obsługi zdarzenia *click*:
+
 JS4:
 ```js
 var handler = function() {
@@ -268,19 +270,17 @@ var handler = function() {
 $(".container").on("click", handler);
 ```
 
-Teraz klikanie zmienia kolor „drabinki”, a nie jak poprzednio
-kolor kwadratów.
+Teraz klikanie zmienia kolor „drabinki”, a nie jak poprzednio kolor kwadratów.
 
-Zmieniamy kod, tak aby klikanie zmieniało, kolor kwadratów.
-
-W tym celu podmieniamy ostatni wiersz powyżej na:
+Zmieniamy kod, tak aby klikanie zmieniało kolor kwadratów.
+W tym celu podmieniamy ostatni wiersz w kodzie powyżej na:
 
 JS5:
 ```js
 $(".container").on("click", ".button", handler);
 ```
 
-Dodajemy jedną funkcję obsługi zdarzenia.
-Poprzednio (JS1–JS3) dodawaliśmy trzy funkcje.
+Dodaliśmy jedną funkcję obsługi zdarzenia.
+Poprzednio (JS1–JS3) dodawaliśmy trzy te same funkcje.
 
 Cały przykład → [jsbin](http://jsbin.com/ogufuf/11/edit)
