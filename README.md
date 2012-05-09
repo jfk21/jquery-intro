@@ -290,3 +290,5 @@ $(".container").on("click", ".button", handler);
 
 Dodajemy jedną funkcję obsługi zdarzenia.
 Poprzednio (JS1–JS3) dodawaliśmy trzy funkcje.
+
+Cały przykład → [jsbin](http://jsbin.com/ogufuf/11/edit)
