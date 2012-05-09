@@ -211,7 +211,7 @@ HTML:
     background: goldenrod;
     margin: 25px;
   }
-  #container {
+  .container {
     width: 200px;
     margin: 25px;
     background: crimson;
@@ -223,7 +223,7 @@ HTML:
 </head>
 <body>
 
-<div id=container>
+<div class=container>
   <div class=button></div>
   <div class=button></div>
   <div class=button></div>
@@ -260,15 +260,6 @@ $(".button").on({
 });
 ```
 
-Wymieniamy kod z pojemnikami *div* na:
-```html
-<div class=container>
-  <div class=button></div>
-  <div class=button></div>
-  <div class=button></div>
-</div>
-```
-
 JS4:
 ```js
 var handler = function() {
@@ -277,11 +268,12 @@ var handler = function() {
 $(".container").on("click", handler);
 ```
 
-Teraz klikanie zmienia kolor „drabinki”, a nie jak poprzednio
+Teraz klikanie zmienia kolor „drabinki”, a nie jak poprzednio
 kolor kwadratów.
 
 Zmieniamy kod, tak aby klikanie zmieniało, kolor kwadratów.
-Podmieniamy jeden wiersz:
+
+W tym celu podmieniamy ostatni wiersz powyżej na:
 
 JS5:
 ```js
