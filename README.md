@@ -68,7 +68,7 @@ $(function() {
 });
 ```
 
-## Drugi przykład – *DOM traversal*
+## Drugi przykład – *selectors*, *DOM traversal*
 
 * [Szablon z „document ready wrapper”](http://jsbin.com/ogufuf/2/edit#javascript,html,live)
 
@@ -189,3 +189,53 @@ $("td:contains(Ruby)")
 ```
 
 Cały przykład → [jsbin](http://jsbin.com/ogufuf/7/edit)
+
+
+## Przykład czwarty – *events*
+
+* jquery API – [Events](http://api.jquery.com/category/events/)
+
+HTML:
+```html
+<!doctype html>
+<html lang=pl>
+<head>
+  <meta charset=utf-8>
+  <title>jQuery Intro</title>
+  <script src="http://code.jquery.com/jquery.min.js">
+  </script>
+  <style>
+  body { font-size: 20px; }
+  .button {
+    width: 150px; height: 150px;
+    background: goldenrod;
+    margin: 25px;
+  }
+  #container {
+    width: 200px;
+    margin: 25px;
+    background: crimson;
+  }
+  .bgcolor {
+    background: sienna;
+  }
+  </style>
+</head>
+<body>
+
+<div id=container>
+  <div class=button></div>
+  <div class=button></div>
+  <div class=button></div>
+</div>
+
+</body>
+</html>
+```
+
+JS1:
+```js
+$(".button").on("click", function(){
+  $(this).toggleClass("bgcolor");
+});
+```
