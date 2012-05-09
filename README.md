@@ -1,6 +1,7 @@
 # Użyteczne linki
 
-* [HTML5 Doctor](http://html5doctor.com/)
+* [HTML5 Doctor](http://html5doctor.com/),
+  [HTML5 Element Index](http://html5doctor.com/element-index/)
 * [jQuery Selectors](http://refcardz.dzone.com/refcardz/jquery-selectors)
 * [jQuery Fundamentals](http://jqfundamentals.com/book/index.html)
 * [Learning jQuery](http://www.learningjquery.com/) – Tips, Techniques, Tutorials
