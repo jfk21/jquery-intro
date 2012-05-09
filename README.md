@@ -235,7 +235,58 @@ HTML:
 
 JS1:
 ```js
-$(".button").on("click", function(){
+$(".button").on("click", function() {
   $(this).toggleClass("bgcolor");
 });
 ```
+
+JS2:
+```js
+var handler = function() {
+  $(this).toggleClass("bgcolor");
+};
+$(".button").on("click", handler);
+```
+
+JS3:
+```js
+$(".button").on({
+  mouseenter: function() {
+    $(this).addClass("bgcolor");
+  },
+  mouseleave: function() {
+    $(this).removeClass("bgcolor");
+  }
+});
+```
+
+Wymieniamy kod z pojemnikami *div* na:
+```html
+<div class=container>
+  <div class=button></div>
+  <div class=button></div>
+  <div class=button></div>
+</div>
+```
+
+JS4:
+```js
+var handler = function() {
+  $(this).toggleClass("bgcolor");
+};
+$(".container").on("click", handler);
+```
+
+Teraz klikanie zmienia kolor „drabinki”, a nie jak poprzednio
+kolor kwadratów.
+
+Zmieniamy kod, tak aby klikanie zmieniało, kolor kwadratów.
+Podmieniamy jeden wiersz:
+
+JS5:
+```js
+$(".container").on("click", ".button", handler);
+```
+
+Dodajemy jedną funkcję obsługi zdarzenia.
+Poprzednio (JS1–JS3) dodawaliśmy trzy funkcje.
